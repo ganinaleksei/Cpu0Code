@@ -1,0 +1,14 @@
+Build procedure:
+1. Go to this directory <llvm-source-root-dir>/lib/Target/Cpu0/LLVMBackendTutorialExampleCode in terminal command.
+2. Clean the old chapter example of directory <llvm-source-root-dir>/lib/Target/Cpu0/LLVMBackendTutorialExampleCode by command:
+   sh removecpu0.sh
+3. Go to directory <llvm-source-root-dir>/lib/Target/Cpu0/
+   cd ../.
+4. Copy the chapter example to directory <llvm-source-root-dir>/lib/Target/Cpu0/, for example:
+   Current directory is <llvm-source-root-dir>/lib/Target/Cpu0.
+   cp -rf LLVMBackendTutorialExampleCode/Chapter2/* .  // Copy chapter 2 example code to parent dir (lib/Target/Cpu0)
+   cp -rf LLVMBackendTutorialExampleCode/CHAPTER11_2/* .  // Copy chapter 11 section 2 example code to parent dir (lib/Target/Cpu0)
+5. Go to you <llvm-build-dir> directory to build code, for example:
+   LLVM source directory is at /Users/Jonathan/test/llvm/src and 
+   LLVM build directory is at /Users/Jonathan/test/llvm/cmake_debug_build, then
+   cmake -DCMAKE_CXX_COMPILER=clang++ -DCMAKE_C_COMPILER=clang -DCMAKE_BUILD_TYPE=Debug -G "Xcode" ../src/
